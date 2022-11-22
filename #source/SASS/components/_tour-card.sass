@@ -1,0 +1,31 @@
+.card-tour
+  height: 52rem
+  perspective: 150rem
+  -moz-perspective: 150rem
+  position: relative
+  &__side
+    height: 52rem
+    transition: all .7s ease-out
+    color: white
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    backface-visibility: hidden
+    &_front
+      background: yellow
+    &_back
+      background: green
+      transform: rotateY(180deg)
+      background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+  &:hover &__side_front
+    transform: rotateY(-180deg)
+  &:hover &__side_back
+    transform: rotateY(0deg)
+
+  &__img
+    background-blend-mode: hard-light
+    height: 20rem
+    background: $color-brown-light url('../img/main/card-tour1.jpg') center / cover no-repeat
+  &__title
+  &__descr

@@ -314,6 +314,70 @@ body {
           transform: scale(0.9);
 }
 
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.adventure-card:hover {
+  -webkit-transform: translateY(-1rem) scale(1.03);
+          transform: translateY(-1rem) scale(1.03);
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6.2rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.03%, rgba(186, 133, 84, 0.7)), color-stop(99.94%, rgba(161, 79, 3, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card-tour {
+  height: 52rem;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 52rem;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card-tour__side_front {
+  background: yellow;
+}
+.card-tour__side_back {
+  background: green;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+}
+.card-tour:hover .card-tour__side_front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 20rem;
+  background: #BA8554 url("../img/main/card-tour1.jpg") center/cover no-repeat;
+}
 .header {
   position: relative;
   height: 95vh;
@@ -384,4 +448,19 @@ body {
 
 .section-about {
   padding-top: 8rem;
+}
+
+.section-adventure {
+  padding: 21rem 0;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/main/section-adventure.jpg") center/cover no-repeat;
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+.section-adventure > * {
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.section-tour {
+  padding-top: 21rem;
 }
