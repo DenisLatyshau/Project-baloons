@@ -455,7 +455,7 @@ body {
 }
 
 .feedBack-card {
-  width: 75%;
+  width: 85%;
   background: rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -471,7 +471,6 @@ body {
 .feedBack-card__img {
   width: 15rem;
   height: 15rem;
-  background-color: green;
   float: left;
   border-radius: 50%;
   shape-outside: circle(50% at 50% 50%);
@@ -482,11 +481,37 @@ body {
 }
 .feedBack-card__img img {
   height: 100%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .feedBack-card__name {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  opacity: 0;
+}
+.feedBack-card:hover .feedBack-card__name {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.feedBack-card:hover img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(0.3rem) brightness(70%);
+          filter: blur(0.3rem) brightness(70%);
 }
 
 .header {
