@@ -76,6 +76,9 @@ body {
           transform: skewY(2deg) skewX(15deg) scale(1.02);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
+.title-secondary_white {
+  color: #ffffff;
+}
 
 .title-third {
   font-size: 2rem;
@@ -451,6 +454,41 @@ body {
   font-weight: 500;
 }
 
+.feedBack-card {
+  width: 75%;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  -webkit-transform: skewX(330deg);
+          transform: skewX(330deg);
+}
+.feedBack-card > * {
+  -webkit-transform: skewX(-330deg);
+          transform: skewX(-330deg);
+}
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background-color: green;
+  float: left;
+  border-radius: 50%;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.feedBack-card__img img {
+  height: 100%;
+}
+.feedBack-card__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -521,6 +559,7 @@ body {
 
 .section-about {
   padding-top: 8rem;
+  margin-bottom: 15rem;
 }
 
 .section-adventure {
@@ -536,4 +575,9 @@ body {
 
 .section-tour {
   padding-top: 21rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedBack {
+  padding-top: 8rem;
 }
