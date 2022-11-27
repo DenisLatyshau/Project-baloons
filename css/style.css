@@ -16,6 +16,8 @@ body {
 
 .container {
   background-color: #F7F7F7;
+  position: relative;
+  z-index: 0;
 }
 
 body {
@@ -514,6 +516,27 @@ body {
           filter: blur(0.3rem) brightness(70%);
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -604,5 +627,6 @@ body {
 }
 
 .section-feedBack {
-  padding-top: 8rem;
+  padding: 8rem 0;
+  position: relative;
 }
