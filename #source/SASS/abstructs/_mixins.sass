@@ -14,13 +14,13 @@
   @media (max-width: 600px) 
     @content
 
-@mixin respond($breakpoint)
+@mixin respond ($breakpoint)
   @if $breakpoint == phone
     @media (max-width: 600px)
       @content
-      
+
   @if $breakpoint == tab-port
-    @media only screen and (max-width: 900px)
+    @media (max-width: 900px)
       @content
 
   @if $breakpoint == tab-land
